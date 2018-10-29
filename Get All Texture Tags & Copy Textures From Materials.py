@@ -71,11 +71,8 @@ def main():
                 MatName = finalstr
                 
                 # Find Material
-                GetMat = doc.SearchMaterial(MatName)
-                
-                # Get Material
-                userMat = doc.GetActiveMaterial()
-                
+                userMat = doc.SearchMaterial(MatName)
+                                
                 # Get Material Shaders Texture Paths.
                 if userMat[c4d.MATERIAL_USE_COLOR] == True:
                     m_color = {'str':"Color", 'shader':userMat[c4d.MATERIAL_COLOR_SHADER]}
